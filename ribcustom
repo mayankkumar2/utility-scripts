@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$1" = "" ]; then
+	echo "A second argument is required"
+elif [ "$2" != "" ]; then
+	echo "More than 1 argument supplied"
+else
+	if [ ! -d "/tmp/ribcustom-tmps" ]; then
+		mkdir /tmp/ribcustom-tmps
+		echo "TMP Folder set as /tmp/ribcustom-tmps"
+	fi
+	nohup $1 > /tmp/ribcustom-tmps/$1.dump &
+fi
