@@ -14,7 +14,7 @@ ribcustom pycharm
 <dt>mkoptlink</dt>
 <dd>
 Script to create link in a local DIR.<br>
-<b>Usage:</b>
-<code>Usage: mkoptlink FILENAME LINKNAME </code>
+<b>Usage:</b><br>
+<code>mkoptlink FILENAME LINKNAME </code>
 </dd>
 </dl>
