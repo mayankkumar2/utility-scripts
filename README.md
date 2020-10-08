@@ -9,4 +9,12 @@ Its a script to detatch a process from the terminal and run it in background. <b
 ribcustom pycharm
 </code>
 </dd>
+<dt>
+
+<dt>mkoptlink</dt>
+<dd>
+Script to create link in a local DIR.<br>
+<b>Usage:</b>
+<code>Usage: mkoptlink FILENAME LINKNAME </code>
+</dd>
 </dl>
