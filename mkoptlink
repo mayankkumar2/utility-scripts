@@ -1,0 +1,29 @@
+#!/bin/bash
+OPT_DIR="/home/mayankk/opt"
+BIN="$OPT_DIR/bin"
+CURR_DIR="$(pwd)"
+if [ "$1" == "" ] || [ "$2" == "" ]; then
+	echo "Usage: mkoptlink FILENAME LINKNAME"
+	exit 0
+fi
+CURRENT_FILE="$1"
+CURR_FILE_LOCATION="$CURR_DIR/$CURRENT_FILE"
+
+if test -f "$BIN/$2" ; then
+	echo "$BIN/$2 already exists"
+	exit 0
+fi
+
+if test -f "$CURR_FILE_LOCATION"; then
+	echo "File location: [$CURR_FILE_LOCATION]"
+	ln -s $CURR_FILE_LOCATION "$BIN/$2"
+	if test -f "$BIN/$2"; then
+		echo "Successfully created the link"
+	else
+		echo "Failed to create the link"
+	fi	
+else
+	echo "$CURR_FILE_LOCATION doesn't exists."
+fi
+
+
