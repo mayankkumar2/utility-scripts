@@ -8,5 +8,5 @@ else
 		mkdir /tmp/ribcustom-tmps
 		echo "TMP Folder set as /tmp/ribcustom-tmps"
 	fi
-	nohup $1 > /tmp/ribcustom-tmps/$1.dump &
+	nohup $@ > /tmp/ribcustom-tmps/$1.dump &
 fi
